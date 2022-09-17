@@ -1,0 +1,24 @@
+//@version=5
+indicator(title="Multiple EMA", shorttitle="MULTI EMA", overlay=true, timeframe="", timeframe_gaps=true)
+src = input(close, title="Source")
+offset = input.int(title="Offset", defval=0, minval=-500, maxval=500)
+
+len1 = input.int(10, minval=1, title="Length1")
+out1 = ta.ema(src, len1)
+plot(out1, title="1EMA", color=color.red, offset=offset)
+
+len2 = input.int(20, minval=1, title="Length2")
+out2 = ta.ema(src, len2)
+plot(out2, title="2EMA", color=color.green, offset=offset)
+
+len3 = input.int(30, minval=1, title="Length3")
+out3 = ta.ema(src, len3)
+plot(out3, "3EMA", color=color.blue, offset=offset)
+    
+ma(source, length, type) =>
+    switch type
+        "SMA" => ta.sma(source, length)
+        "EMA" => ta.ema(source, length)
+        "SMMA (RMA)" => ta.rma(source, length)
+        "WMA" => ta.wma(source, length)
+        "VWMA" => ta.vwma(source, length)
