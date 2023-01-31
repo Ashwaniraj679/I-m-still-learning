@@ -1,2 +1,4 @@
-let v = 458
-console.log(v)
+import numpy as np 
+my_arr = np.arange(500000000)
+my_list = list(range(1000000))
+%time for _ in range(10): my_arr2 = my_arr * 2
