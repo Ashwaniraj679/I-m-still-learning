@@ -1,5 +1,18 @@
-import folium as fm
+class Car():
+    def __init__(self,make,model,year,color):
+        self.make = make
+        self.model = model
+        self.year = year 
+        self.color = color
+        
+    def start_engine(self):
+        print({f'{self.make} {self.model} ({self.year}) engine has started'})
+    
+    def stop_engine(self):
+        pass
+    
+    def honk_honk(self):
+        pass
 
-fm.Map(location=[40.4637, -3.7492], zoom_start=6, tiles='Stamen Terrain')
-fm.show()
-
+car1 = Car("Maruti","Suzuki", 2012,"Red")
+car1.start_engine()
