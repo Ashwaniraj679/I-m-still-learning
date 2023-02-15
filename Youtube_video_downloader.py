@@ -8,6 +8,7 @@ from pytube import Channel
 from pytube import Search
 
 
+
 def clear_console():  # Clears the console
     os.system("cls" if os.name == "nt" else "clear")
 
