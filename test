@@ -19,4 +19,14 @@ car1.start_engine()
 
 class engine():
     def __init__(self):
-        self.self = var 
+        self.self = 
+        
+def unique_chars(string):
+    chars = []
+    res = 
+    for i in string:
+        if i not in chars:
+            chars.append(i)
+        else:
+            break
+    return
