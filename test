@@ -19,11 +19,11 @@ car1.start_engine()
 
 class engine():
     def __init__(self):
-        self.self = 
+        self.self = self
         
 def unique_chars(string):
     chars = []
-    res = 
+    res = []
     for i in string:
         if i not in chars:
             chars.append(i)
